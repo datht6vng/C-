@@ -15,7 +15,7 @@ std::ostream &operator<<(std::ostream &out_stream, const std::vector<T> &data)
     out_stream << "[";
     for (typename std::vector<T>::const_iterator itr = data.begin(); itr != data.end(); ++itr)
         out_stream << *itr << (itr != --data.end() ? ", " : "");
-    out_stream << "]" << std::endl;
+    out_stream << "]";
     return out_stream;
 }
 
@@ -25,7 +25,7 @@ std::ostream &operator<<(std::ostream &out_stream, const std::list<T> &data)
     out_stream << "[";
     for (typename std::list<T>::const_iterator itr = data.begin(); itr != data.end(); ++itr)
         out_stream << *itr << (itr != --data.end() ? ", " : "");
-    out_stream << "]" << std::endl;
+    out_stream << "]";
     return out_stream;
 }
 
@@ -35,7 +35,7 @@ std::ostream &operator<<(std::ostream &out_stream, const std::unordered_map<T1, 
     out_stream << "[";
     for (typename std::unordered_map<T1, T2>::const_iterator itr = data.begin(); itr != data.end(); ++itr)
         out_stream << itr->first << " : " << itr->second << (itr != --data.end() ? ", " : "");
-    out_stream << "]" << std::endl;
+    out_stream << "]";
     return out_stream;
 }
 
@@ -45,7 +45,7 @@ std::ostream &operator<<(std::ostream &out_stream, const std::map<T1, T2> &data)
     out_stream << "[";
     for (typename std::map<T1, T2>::const_iterator itr = data.begin(); itr != data.end(); ++itr)
         out_stream << itr->first << " : " << itr->second << (itr != --data.end() ? ", " : "");
-    out_stream << "]" << std::endl;
+    out_stream << "]";
     return out_stream;
 }
 

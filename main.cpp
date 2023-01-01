@@ -1,5 +1,4 @@
-﻿#define EXTENSION
-/*----------------------------------------------------------------------------------------*/
+﻿/*----------------------------------------------------------------------------------------*/
 #define _CRT_SECURE_NO_WARNINGS
 #include <bits/stdc++.h>
 using namespace std;
@@ -15,10 +14,12 @@ inline void set_io()
 	freopen(INPUT_FILE, "r", stdin);
 	freopen(OUTPUT_FILE, "w", stdout);
 #endif
+}
+
 #ifdef EXTENSION
 #include "extension.cpp"
 #endif
-}
+
 #define get_bit(a, n) ((a) >> (n)&1)
 int count_test_case = 0;
 #define print_case(result) cout << "Case #" << count_test_case++ << ": " << result << endl;
